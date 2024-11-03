@@ -1,0 +1,137 @@
+/* General styling */
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #140004;
+}
+
+body {
+	position: relative;
+}
+.news-content {
+	width: 100vw;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.news-content .container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	gap: 20px;
+}
+.main {
+	width: 100%;
+}
+.main img {
+	width: 100%;
+	/* height: auto; */
+}
+.main .post-title {
+	font-size: 3rem;
+}
+.main .content {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.main .control {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 2rem;
+}
+.main .control button {
+	padding: 10px 30px;
+	border: none;
+	background: none;
+	background-color: #0047cc;
+	border-radius: 50px;
+	color: white;
+}
+.main .control button:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+/*Special: Pop-up modal */
+.quiz-container {
+	position: fixed;
+	top: 100px;
+	width: 100vw;
+	height: calc(100vh - 100px);
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.3);
+
+	/* Equivalent of saying display none */
+	opacity: 0;
+	pointer-events: none;
+}
+.quiz-container.show {
+	pointer-events: auto;
+	opacity: 1;
+}
+
+#quiz {
+	background-color: #f5f5f5;
+	height: fit-content;
+	width: fit-content;
+	padding: 2rem;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+#quiz .options {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+#quiz .options .option label:hover {
+	cursor: pointer;
+}
+#quiz .control {
+	display: flex;
+	justify-content: space-between;
+}
+#quiz .submit-container {
+	display: flex;
+	justify-content: flex-end;
+}
+#quiz .submit-container button {
+	margin-top: 0.5rem;
+	padding: 7.5px 15px;
+	border-radius: 10px;
+	border: 1px solid #0047cc;
+	background: none;
+}
+#quiz .submit-container button:hover {
+	background-color: #0047cc;
+	cursor: pointer;
+	color: #f5f5f5;
+}
+@media screen and (max-width: 350px) {
+	#quiz {
+		width: 70vw;
+	}
+}
+
+/* Responsiveness */
+@media screen and (max-width: 769px) {
+	.news-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.news-content .container {
+		width: 80vw;
+		display: flex;
+		flex-direction: column;
+	}
+	.news-content .container .ad-section {
+		display: none;
+	}
+}

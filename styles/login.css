@@ -1,0 +1,116 @@
+/* 
+	#140004 - licorice
+	#0047CC - violet blue
+	#F5F5F5 - white smoke
+*/
+
+/* Generic styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Poppins;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* Targeted styling */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #f5f5f5;
+}
+
+.login-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 440px;
+	height: 480px;
+	padding: 30px;
+}
+.login-header {
+	text-align: center;
+	margin: 20px 0 40px 0;
+}
+.login-header header {
+	font-family: Poppins;
+	color: #140004;
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+.input-box .input-field {
+	width: 100%;
+	height: 60px;
+	font-size: 1.1rem;
+	padding: 0 1.5rem;
+	margin-bottom: 15px;
+	border-radius: 30px;
+	border: 1px solid #140004;
+	box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);
+	outline: none;
+	transition: 0.3s;
+}
+::placeholder {
+	font-weight: 500;
+	color: #140004;
+}
+.input-field:focus {
+	width: 105%;
+}
+.forgot {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+section {
+	display: flex;
+	align-items: center;
+	font-size: 0.9rem;
+	color: #140004;
+}
+section:nth-child(1) {
+	gap: 10px;
+}
+section a {
+	color: #140004;
+}
+section a:hover {
+	text-decoration: underline;
+	color: #0047cc;
+}
+.input-submit {
+	position: relative;
+}
+.submit-btn {
+	width: 100%;
+	height: 60px;
+	background: #0047cc;
+	border: none;
+	border-radius: 30px;
+	color: white;
+	font-size: 17px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.submit-btn:hover {
+	background: #0047ccea;
+	transform: scale(1.05, 1);
+}
+.sign-up-link {
+	text-align: center;
+	font-size: 0.9rem;
+	margin-top: 20px;
+}
+.sign-up-link a {
+	color: #140004;
+	font-weight: 600;
+}
+.sign-up-link a:hover {
+	text-decoration: underline;
+	color: #0047cc;
+}
