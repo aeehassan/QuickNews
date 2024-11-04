@@ -97,6 +97,14 @@ body {
 	display: flex;
 	justify-content: space-between;
 }
+#quiz .control img {
+	padding: 5px;
+}
+#quiz .control img:hover {
+	background-color: #14000436;
+	border-radius: 7px;
+	cursor: pointer;
+}
 #quiz .submit-container {
 	display: flex;
 	justify-content: flex-end;
