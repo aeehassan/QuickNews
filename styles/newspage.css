@@ -90,7 +90,8 @@ body {
 	flex-direction: column;
 	gap: 0.3rem;
 }
-#quiz .options .option label:hover {
+#quiz .options .option label:hover,
+#quiz .options input:hover {
 	cursor: pointer;
 }
 #quiz .control {
