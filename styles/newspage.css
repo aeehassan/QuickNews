@@ -1,7 +1,10 @@
 /* General styling */
-* {
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 a {
 	text-decoration: none;
@@ -16,8 +19,66 @@ body {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
+/* news mode begin */
+.news-content .news-mode {
+	height: 2.5rem;
+	display: flex;
+	gap: 0.2rem;
+	align-items: center;
+	justify-content: center;
+}
+.news-content .news-mode li {
+	display: inline-block;
+	width: 3rem;
+	text-align: center;
+	box-sizing: content-box;
+	padding: 0.6rem 0.5rem;
+	transition: background-color 0.2s ease;
+	position: relative;
+	cursor: pointer;
+}
+.news-mode li::after {
+	position: absolute;
+	content: "";
+	background-color: #0047cc;
+	height: 3px;
+	width: 0%;
+	border-radius: 3px;
+	left: 0px;
+	bottom: 2px;
+	transition: 0.3s;
+}
+.news-mode li:hover::after,
+.news-mode li:active::after {
+	width: 100%;
+}
+.news-mode li > a {
+	transition: 0.3s ease-out;
+}
+.news-mode li:hover > a,
+.news-mode li:active > a {
+	color: #140004;
+	font-weight: 600;
+}
+.news-mode li:nth-child(2):after {
+	position: absolute;
+	content: "";
+	background-color: #0047cc;
+	height: 3px;
+	width: 100%;
+	border-radius: 3px;
+	left: 0px;
+	bottom: 2px;
+	transition: 0.3s;
+}
+.news-mode li:nth-child(2) > a {
+	color: #140004;
+	font-weight: 600;
+}
+/* news mode end */
 .news-content .container {
 	width: 100%;
+	margin-top: 0.8rem;
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
 	gap: 20px;
@@ -60,6 +121,9 @@ body {
 }
 .interaction > img {
 	height: 1rem;
+}
+.interaction > span {
+	font-weight: 520;
 }
 .interaction:hover > #like {
 	color: red;

@@ -180,7 +180,7 @@ nav .profile-image {
 }
 
 .news-post > .news-text {
-	padding: 1rem;
+	padding: 1rem 1rem 0.5rem 1rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
@@ -211,6 +211,35 @@ nav .profile-image {
 	color: #0047ccc2;
 	text-decoration: underline;
 	transition: all ease 0.3s;
+}
+.news-post .interaction-btns {
+	display: flex;
+	gap: 8px;
+	padding-left: 1rem;
+	padding-bottom: 0.8rem;
+}
+.interaction-btns .interaction {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+.interaction-btns .interaction:hover {
+	cursor: pointer;
+}
+.interaction > svg {
+	height: 1.4rem;
+}
+.interaction > img {
+	height: 1rem;
+}
+.interaction > span {
+	font-weight: 520;
+}
+.interaction:hover > #like {
+	color: red;
+}
+.interaction:hover > #save {
+	color: #0047cc;
 }
 /*  */
 
@@ -332,7 +361,12 @@ nav .profile-image {
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
-
+@media screen and (min-width: 1500px) {
+	nav {
+		justify-content: center;
+		gap: 25vw;
+	}
+}
 @media screen and (max-width: 1200px) {
 	.news-section > .container {
 		grid-template-columns: repeat(3, 1fr);
