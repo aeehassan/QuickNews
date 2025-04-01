@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>QuickNews</title>
+
+		<link rel="stylesheet" href="./styles/signup.css" />
+	</head>
+	<body>
+		<form action="#" class="signup-form">
+			<div class="signup-header">
+				<header>Sign up</header>
+			</div>
+			<div class="input-box">
+				<input
+					type="text"
+					class="input-field"
+					name="fname"
+					id="fname"
+					placeholder="First name"
+				/>
+			</div>
+			<div class="input-box">
+				<input
+					type="text"
+					class="input-field"
+					name="lname"
+					id="lname"
+					placeholder="Last name"
+				/>
+			</div>
+			<div class="input-box">
+				<input
+					type="text"
+					class="input-field"
+					name="username"
+					id="username"
+					placeholder="Username"
+				/>
+			</div>
+			<div class="input-box">
+				<input
+					type="email"
+					class="input-field"
+					name="email"
+					id="email"
+					placeholder="Email address"
+				/>
+			</div>
+			<div class="input-box">
+				<input
+					type="tel"
+					class="input-field"
+					name="contact"
+					id="contact"
+					placeholder="Phone number"
+					minlength="11"
+					maxlength="11"
+					pattern="[0-9]*"
+					inputmode="numeric"
+				/>
+			</div>
+			<div class="input-box">
+				<input
+					type="text"
+					class="input-field"
+					name="vcode"
+					id="vcode"
+					placeholder="Enter verification code"
+					minlength="6"
+					maxlength="6"
+					pattern="[0-9]*"
+					inputmode="numeric"
+					required
+				/>
+			</div>
+			<div class="input-box">
+				<input
+					type="password"
+					class="input-field"
+					name="password"
+					id="password"
+					minlength="6"
+					placeholder="Password"
+					required
+				/>
+			</div>
+			<div class="input-box">
+				<input
+					type="password"
+					class="input-field"
+					name="cpassword"
+					id="cpassword"
+					minlength="6"
+					placeholder="Confirm password"
+					required
+				/>
+			</div>
+
+			<div class="input-submit">
+				<button
+					type="button"
+					class="signup-btn"
+					onclick="location.href='./index.html'"
+				>
+					Sign up
+				</button>
+			</div>
+		</form>
+	</body>
+</html>

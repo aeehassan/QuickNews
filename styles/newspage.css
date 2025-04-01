@@ -39,8 +39,33 @@ body {
 }
 .main .control {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+	align-items: center;
 	padding-top: 2rem;
+}
+.main .control .interaction-btns {
+	display: flex;
+	gap: 10px;
+}
+.interaction-btns .interaction {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+.interaction-btns .interaction:hover {
+	cursor: pointer;
+}
+.interaction > svg {
+	height: 1.4rem;
+}
+.interaction > img {
+	height: 1rem;
+}
+.interaction:hover > #like {
+	color: red;
+}
+.interaction:hover > #save {
+	color: #0047cc;
 }
 .main .control button {
 	padding: 10px 30px;
