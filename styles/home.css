@@ -18,7 +18,7 @@ nav {
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 nav > #text-logo {
-	margin-left: 2.5rem;
+	margin-left: 1.5rem;
 	color: #0047cc;
 }
 nav > #cta-buttons {
@@ -40,12 +40,74 @@ nav > #cta-buttons {
 	color: white;
 }
 
+.hero-section {
+	display: flex;
+	gap: 5vw;
+	align-items: center;
+	width: 100%;
+	/* width: fit-content; */
+	/* margin-left: auto;
+	margin-right: auto; */
+	justify-content: center;
+}
+.right-side .hero-msg {
+	width: 320px;
+}
+.right-side .qr-code {
+	display: flex;
+	align-items: center;
+}
+.right-side .download-options {
+	display: flex;
+	align-items: center;
+}
+.download-options .icons {
+	display: flex;
+	align-items: center;
+}
+.right-side .download-options img[alt="and"] {
+	width: 36px;
+}
+.right-side .download-options img[alt="apple"] {
+	width: 30px;
+}
+.left-side {
+	background-image: url("/images/Overwhelmed-cuate.svg");
+	background-repeat: no-repeat;
+	height: 30rem;
+	width: 30rem;
+}
+
 /* Responsiveness design */
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1400px) {
 	nav {
 		justify-content: center;
 		gap: 25vw;
 	}
+}
+@media screen and (max-width: 900px) {
+	.hero-section {
+		flex-direction: column;
+	}
+	.right-side {
+		margin-top: 5vw;
+		width: 50%;
+	}
+	.right-side .hero-msg {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 550px) {
+	.right-side {
+		width: 90%;
+	}
+	.left-side {
+		width: 90%;
+	}
+
+	/* .right-side .hero-msg {
+		
+	} */
 }
 @media screen and (max-width: 425px) {
 	nav {
@@ -55,5 +117,8 @@ nav > #cta-buttons {
 	}
 	nav > #text-logo {
 		margin-left: 0;
+	}
+	.left-side {
+		background-image: none;
 	}
 }
